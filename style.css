@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body
+  {
+      overflow-y: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+.container
+{
+    background:linear-gradient(-360deg, rgb(143, 255, 245), rgb(247, 167, 87));
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+   
+}
+.sun
+{
+    background-color: #ea8e4c;
+    border-radius:100px;
+    height: 100px;
+    width: 107px;
+    position: relative;
+    top: 5%;
+    left: 45%;
+}
+.way
+{
+    background: url("images/way.png");
+    width: 500%;
+    height: 650px;
+    position: absolute;
+    bottom: 0;
+    background-repeat: repeat-x;
+    animation:cityanimation 3s linear infinite;;
+}
+
+@keyframes cityanimation
+{
+    100%
+    {
+        transform: translateX(-2500px);
+    }
+}
+.car
+{
+    background-size: 100% 100%;
+    position: relative;
+    bottom: 40%;
+    left: 5%;
+    margin: 0px 0px -220px 0px;
+    animation: caranimation 3s infinite;
+   
+}
+@keyframes caranimation
+{
+    50%
+    {
+        margin: 0px 0px -250px 0px;
+    }
+    100%
+    {
+       margin: 0px 0px -220px 0px;
+    }
+}
+.cloud
+{
+    height: 160px;
+  background-repeat: repeat-x;
+  margin-top: 3em;
+  animation: cloudanimation 9s linear infinite;
+}
+@keyframes cloudanimation
+{
+    100%
+    {
+        
+        transform: translateX(1200px);
+        opacity: 0.4;
+    }
+}
+#rain
+{
+    display: none;
+    position: absolute;
+    background-size: 100% 100%;
+   width: 100vw;
+  animation: rainanimation 1s linear infinite;
+}
+@keyframes rainanimation
+{
+   0%{
+      bottom: 30%;
+   }
+   100% 
+   {
+       
+   }
+}
+audio
+{
+    position:absolute;
+    margin: 550px 0px 0px 662px;
+    height: 20px;
+    width: 20px;
+}
